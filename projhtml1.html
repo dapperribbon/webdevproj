@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="projcss.css">
+  <script src="https://kit.fontawesome.com/0ade55d303.js" crossorigin="anonymous"></script>
+
+
+<title>NDP 2022</title>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div> 
+
+
+  <div id="navbar">
+    <a id="logo" href="projhtml1.html"><img src="./images/NDP 22 Logo.png" alt="NDP logo"></a>
+      <nav>
+          <ul id="links">
+            <li class="navlinks"><a href="projhtml1.html">Home</a></li>
+            <li class="navlinks"><div class="dropdown">
+              <button>Parade day<i class="fa-solid fa-angle-down fa-bounce"></i></button>
+              <div class="dropdown-content">
+              <a href="projhtml2.html">Hosts</a>
+              <a href="projhtml4.html">Schedule</a>
+              </div>
+            </div></li>
+            <li class="navlinks"><a href="projhtml3.html">Contact Me</a></li>
+            <li>
+              <input class="form-control bg-white" list="datalistOptions" id="searchDataList" placeholder="Type to search..."  onfocusin="insideFunction()" onfocusout="outsideFunction()" onkeyup="findFunction()">
+              <datalist id="datalistOptions">
+                <option value="Countdown">
+                <option value="About">
+                <option value="Location">
+                <option value="Socials">
+                <option value="Music">
+                <option value="Hosts">
+                <option value="Contact Me">
+                <option value="Schedule">
+              </datalist>
+              <ul id="myUL" class="droplist">
+                <li><a href="projhtml1.html#head">Countdown</a></li>
+                <li><a href="projhtml1.html#abt">About</a></li>
+                <li><a href="projhtml1.html#main">Location</a></li>
+                <li><a href="projhtml1.html#socials">Socials</a></li>
+                <li><a href="projhtml1.html#music">Music</a></li>
+                <li><a href="projhtml2.html#hosts">Hosts</a></li>
+                <li><a href="projhtml3.html#contactform">Contact Me</a></li>
+                <li><a href="projhtml4.html#timetable">Schedule</a></li>
+              </ul></li>
+      </nav>
+        
+      
+  </div>
+
+  <button type="button" class="btn btn-danger btn-floating btn-lg rounded-circle"  id="btn-back-to-top" onclick="backtotop()">
+    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+  </button>
+<script>let mybutton = document.getElementById("btn-back-to-top");</script>
+<!--navbar&back to top^-->
+
+
+<script>
+  var countDownDate = new Date("aug 9, 2022 17:00:00").getTime();
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    //current date and time
+    var now = new Date().getTime();
+  
+    // distance between dates
+    var distance = countDownDate - now;
+  
+    // Time calculations
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var d = String(days).padStart(2, '0');
+    var hr = String(hours).padStart(2, '0');
+    var min = String(minutes).padStart(2, '0');
+    var sec = String(seconds).padStart(2, '0');
+  
+    // Output
+    document.getElementById("countdown").innerHTML = d + "&nbsp&nbsp" + hr + "&nbsp&nbsp" + min + "&nbsp&nbsp" + sec + "<br>";
+  
+    // when count down is over, pending
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
+  
+<div id="head"></div>
+
+<p id="countdown" class="counternum" style="opacity: 1;"></p>
+<p id="countertext">DAYS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOURS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MINS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC</p>
+
+
+<!--top^-->
+
+<div id="abt" class="sectionhead container py-5 mb-4 jumbotron" style="background-color: white;">
+  <div class="row">
+
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-6">
+      <h3>About the event</h3>
+      <hr class="bg-danger">
+      <p> <br> <br> Some of the highlights in this segment include a Display of capabilities by the SAF and the Home Team, marching contingents from the uniformed services, a virtual military tattoo, and a virtual choir performance of the NDP 2022 theme song “Stronger Together”. </p>
+      <p>Followed by the Show segment titled “The Story of Us”. Which will include live performances and a show film, depicting how Singapore, as a community and nation, emerges stronger from challenges that we have faced. Singaporeans can expect a meaningful show that celebrates the strength and unity of Singaporeans, and calls for us to rise together.</p>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-4 jumbotron">
+      <h2>About NDP</h2>
+      <h4>The Nation Day of Singapore is celebrated every year on August 9, in commemoration of Singapore's independence from Malaysia in 1965. This holiday features a Parade, an address by the Prime Minister of Singapore, and various celebrations.</h4>
+    </div>
+
+  </div>
+</div>
+
+<!--abt^-->
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div>
+      <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.810001042343!2d103.85683931501262!3d1.28815836212875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a82df5627f%3A0x1ff2e3f6296b5da!2sThe%20Float%20%40%20Marina%20Bay!5e0!3m2!1sen!2ssg!4v1656516518038!5m2!1sen!2ssg"></iframe>
+    </div>
+  </div> 
+</div>
+
+<div id="cover" class="container">
+      <div class="row">
+        <div class="pp">
+          <br> <br> <br> <br> <br> <br> <br>
+          <h3 class="text-uppercase">
+            Venue
+          </h3>
+          <br>
+          <p class="text-uppercase">
+            The Float@Marina Bay,<br>
+            9 August 2022
+          </p>
+          <br>
+          <button class="fader" onclick="outFunction()"><span>View on map</span></button>
+        </div>
+      </div>
+</div>
+
+<!--map^-->
+
+<div style="background-color: #e2e2e2;">
+
+<div class="container w-100 h-100">
+  <div class="row">
+    <div class="col-sm-1"></div>
+
+    <div id="socials" class="col-sm-6">
+      <h3> Connect with us</h3>
+      <hr class="bg-danger">
+    </div>
+  </div>
+</div>
+<br>
+
+  <div class="container-fluid h-100 pt-1 p-0 m-1" >
+    <div class="row justify-content-evenly">
+
+
+      <div class="col-md-2">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook</h3>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNDPeeps&tabs=timeline&width=300&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+
+      <div class="col-md-2">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok</h3>
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ndpeeps" data-unique-id="ndpeeps"  data-embed-type="creator" style="min-width: 100%; width: 150%;" > <section> <a target="_blank" href="https://www.tiktok.com/@ndpeeps?refer=creator_embed">@ndpeeps</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> 
+      </div>
+    
+      <div class="col-md-2">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instagram</h3>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/CgWOcWJJ-7o/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/CgWOcWJJ-7o/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/CgWOcWJJ-7o/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by The Official NDP Instagram (@ndpeeps)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>      
+      </div>
+
+
+    </div>
+  </div>
+
+<br> <br> <br>
+
+  <div id="music" class="container w-100 h-100">
+     <div>
+    <div class="col-sm-4">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/IScTJbj_6kc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-3">
+      <iframe style="border-radius:12px; border-style: 3px solid black;" src="https://open.spotify.com/embed/playlist/6awLUZHFgMBKJdNmVpSGrj?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  </div>
+  <br>
+</div>
+
+<!--socials^-->
+
+<footer class="w-100 py-4 flex-shrink-0">
+  <div class="container py-4">
+      <div class="row gy-4 gx-5">
+          <div class="col-lg-4 col-md-6">
+              <h5 class="h1 text-white">NDP2022</h5>
+              <p class="small ">By: Ryan Choong(220297X) for webdev assignment</p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+              <h5 class="text-white mb-3">Quick links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="projhtml1.html">Home</a></li>
+                  <li><a href="projhtml2.html">Hosts</a></li>
+                  <li><a href="projhtml3.html">Contact Me</a></li>
+                  <li><a href="projhtml4.html">Schedule</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+              <ul class="list-unstyled text-muted mb-3">
+                <li class="mb-4"><a href="https://www.tiktok.com/@ndpeeps"><img src="./images/tiktok.png" alt=""></a></li>
+                <li class="mb-4"><a href="https://www.facebook.com/NDPeeps"><img src="./images/facebook.png" alt=""></a></li>
+                <li class="mb-4"><a href="https://www.instagram.com/ndpeeps"><img src="./images/instagram.png" alt=""></a></li>
+              </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-3">Newsletter</h5>
+            <p class="small">Leave your email below to subscribe to my newsletter.</p>
+            <form method="post" action="mailto:220297x@mymail.nyp.edu.sg">
+                <div class="input-group mb-3">
+                    <input class="form-control" name="mailing list address"type="email" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary btn-md" type="submit"><span class="glyphicon glyphicon-envelope fa-flip" style="--fa-animation-duration: 2.5s;" aria-hidden="true"></span></button>
+                </div>
+            </form>
+        </div>
+          
+      </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="projjava.js"></script>
+</body>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="projcss.css">
+  <script src="https://kit.fontawesome.com/0ade55d303.js" crossorigin="anonymous"></script>
+
+<title>Schedule</title>
+</head>
+
+<body>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div> 
+
+  <div id="navbar">
+    <a id="logo" href="projhtml1.html"><img src="./images/NDP 22 Logo.png" alt="NDP logo"></a>
+      <nav>
+          <ul id="links">
+            <li class="navlinks"><a href="projhtml1.html">Home</a></li>
+            <li class="navlinks"><div class="dropdown">
+              <button>Parade day<i class="fa-solid fa-angle-down fa-bounce"></i></button>
+              <div class="dropdown-content">
+              <a href="projhtml2.html">Hosts</a>
+              <a href="projhtml4.html">Schedule</a>
+              </div>
+            </div></li>
+            <li class="navlinks"><a href="projhtml3.html">Contact Me</a></li>
+            <li>
+              <input class="form-control bg-white" list="datalistOptions" id="searchDataList" placeholder="Type to search..."  onfocusin="insideFunction()" onfocusout="outsideFunction()" onkeyup="findFunction()">
+              <datalist id="datalistOptions">
+                <option value="Countdown">
+                <option value="About">
+                <option value="Location">
+                <option value="Socials">
+                <option value="Music">
+                <option value="Hosts">
+                <option value="Contact Me">
+                <option value="Schedule">
+              </datalist>
+              <ul id="myUL" class="droplist">
+                <li><a href="projhtml1.html#head">Countdown</a></li>
+                <li><a href="projhtml1.html#abt">About</a></li>
+                <li><a href="projhtml1.html#main">Location</a></li>
+                <li><a href="projhtml1.html#socials">Socials</a></li>
+                <li><a href="projhtml1.html#music">Music</a></li>
+                <li><a href="projhtml2.html#hosts">Hosts</a></li>
+                <li><a href="projhtml3.html#contactform">Contact Me</a></li>
+                <li><a href="projhtml4.html#timetable">Schedule</a></li>
+              </ul></li>
+      </nav>
+        
+      
+  </div>
+
+  <button type="button" class="btn btn-danger btn-floating btn-lg rounded-circle"  id="btn-back-to-top" onclick="backtotop()">
+    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+  </button>
+<script>let mybutton = document.getElementById("btn-back-to-top");</script>
+   
+
+
+  
+  <div id="timetable" class="sectionhead">
+    <div class="row">
+  
+      <div class="col-sm-2"></div>
+  
+      <div class="col-sm-8">
+        <h3>Event Schedule</h3>
+        <hr class="bg-danger">
+        <br><br>
+        <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">segment</th>
+                <th scope="col">Start-end time</th>
+                <th scope="col">Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>pre-parade</td>
+                <td class="table-success">4PM-5.20PM</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Musical performances</td>
+                <td rowspan="3" class="table-warning">5PM-6.30PM</td>
+                <td>Includes various bits of crowd engagement</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Entry by ministers</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Red Lion jump</td>
+                <td>Happens around 6PM</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Contingents marching in</td>
+                <td class="table-info">6PM-7PM</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Civil Defence Display</td>
+                <td class="table-danger">7PM-7.30PM</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Final Performances</td>
+                <td class="table-primary">7.30PM-9PM</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<footer class="w-100 py-4 flex-shrink-0">
+    <div class="container py-4">
+        <div class="row gy-4 gx-5">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="h1 text-white">NDP2022</h5>
+                <p class="small ">By: Ryan Choong(220297X) for webdev assignment</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-white mb-3">Quick links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="projhtml1.html">Home</a></li>
+                    <li><a href="projhtml2.html">Hosts</a></li>
+                    <li><a href="projhtml3.html">Contact Me</a></li>
+                    <li><a href="projhtml4.html">Schedule</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <ul class="list-unstyled text-muted mb-3">
+                    <li class="mb-4"><a href="https://www.tiktok.com/@ndpeeps"><img src="./images/tiktok.png" alt=""></a></li>
+                    <li class="mb-4"><a href="https://www.facebook.com/NDPeeps"><img src="./images/facebook.png" alt=""></a></li>
+                    <li class="mb-4"><a href="https://www.instagram.com/ndpeeps"><img src="./images/instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h5 class="text-white mb-3">Newsletter</h5>
+              <p class="small">Leave your email below to subscribe to my newsletter.</p>
+              <form method="post" action="mailto:220297x@mymail.nyp.edu.sg">
+                  <div class="input-group mb-3">
+                      <input class="form-control" name="mailing list address"type="email" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn btn-outline-secondary btn-md" type="submit"><span class="glyphicon glyphicon-envelope fa-flip" style="--fa-animation-duration: 2.5s;" aria-hidden="true"></span></button>
+                  </div>
+              </form>
+          </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="projjava.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
